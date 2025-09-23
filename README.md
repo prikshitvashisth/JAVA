@@ -15,7 +15,7 @@ It is intended for learning, exploring concepts, and building familiarity with t
 🚀 How to Run
 
 1. Clone the repository
-- git clone https://github.com/<your-username>/<repo-name>.git
+- git clone https://github.com/prikshitvashisth/JAVA.git
 
 2. Open in any Java IDE (IntelliJ, Eclipse, VS Code) or use command line.
 

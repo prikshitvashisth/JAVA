@@ -29,3 +29,4 @@ public class BinaryToDecimal {
         System.out.println("Decimal equivalent: " + decimal);
     }
 }
+

@@ -10,7 +10,7 @@ public class if_elseIf_else {
         } else if (a == 2) {
             System.out.println("tuesday");
         } else if (a == 3) {
-            System.out.println("wednesda");
+            System.out.println("wednesday");
         } else if (a == 4) {
             System.out.println("thursday");
         } else if (a == 5) {

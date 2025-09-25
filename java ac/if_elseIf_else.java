@@ -14,7 +14,7 @@ public class if_elseIf_else {
         } else if (a == 4) {
             System.out.println("thursday");
         } else if (a == 5) {
-            System.out.println("friday");
+            System.out.println("hello friday");
         } else if (a == 6) {
             System.out.println("saturday");
         } else if (a == 7) {

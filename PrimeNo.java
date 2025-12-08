@@ -1,6 +1,37 @@
 import java.util.Scanner;
 
 public class PrimeNo {
+    
+    //Method 1 (Preferable)
+
+    public static boolean isPrime(int n) {
+    if (n <= 1) return false;   // Handle numbers ≤1
+    if (n == 2) return true;    // 2 is prime
+
+    for (int i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i == 0) {
+            return false;       // Found a divisor → not prime
+        }
+    }
+    return true;                // No divisor found → prime
+}
+
+
+//Method 2
+    public static boolean isPrimeNum(int n) {
+    if (n <= 1) return false;   // Handle numbers ≤1
+    if (n == 2) return true;    // 2 is prime
+
+    for (int i = 2; i <= (n/2); i++) {
+        if (n % i == 0) {
+            return false;       
+        }
+    }
+    return true;                
+}
+
+
+//Method 3 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in); // Create a Scanner object for input
         System.out.print("Enter a number: "); // Prompt the user to enter a number

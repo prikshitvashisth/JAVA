@@ -12,10 +12,10 @@ public class SwapNum {
         return new int[]{a, b};
     }
 
-    
+     
     
     // Method 2: Swap using XOR (bitwise operation)
-    public static int[] swapWithXOR(int a, int b) {
+    public static int[] swapWithXOR(int a, int b) 
         // XOR the values and store the result in 'a'
         a = a ^ b;
         // XOR the new 'a' with 'b' to get the original 'a' and store in 'b'

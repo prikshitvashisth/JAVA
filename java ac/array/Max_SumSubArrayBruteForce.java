@@ -1,6 +1,6 @@
 package array;
 
-public class Max_SumSabArrayBruteForce {
+public class Max_SumSubArrayBruteForce {
     public static void main(String[] args) {
         int arr[] = {1, 2, 3, 4, 5};
         int maxSum = findMaxSubarraySum(arr);

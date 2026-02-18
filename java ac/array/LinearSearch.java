@@ -1,5 +1,4 @@
-package ac.array;
-import java.util.*;
+package array;
 
 public class LinearSearch {
     public static void main(String[] args) {

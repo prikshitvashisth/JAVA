@@ -1,5 +1,3 @@
-package array;
-
 public class SubArray {
     // Print all subarrays of the array, matching the screenshot logic
     public static void printSubarrays(int numbers[]) {

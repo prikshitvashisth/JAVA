@@ -1,5 +1,3 @@
-package array;
-
 public class InputInArray {
     public static void main(String[] args) {
         int[] numbers = new int[5];

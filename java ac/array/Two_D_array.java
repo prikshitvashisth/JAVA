@@ -1,7 +1,7 @@
 package array;
 import java.util.Scanner;
 
-public class TwoDarray{
+public class Two_D_array{
     public static void main(String[] args) {
         int[][] arr = new int[3][3];
         Scanner sc = new Scanner(System.in);

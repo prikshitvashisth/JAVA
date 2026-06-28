@@ -10,7 +10,7 @@ public class DecimalToBinary {
         int originalDecimal = decimal;  // Store original number for final output
 
         int binary = 0;     // To store the binary result as an integer
-        int place = 1;      // To track the position in the binary number (1, 10, 100, ...)
+        int place = 1;      // To track the position in the binary number (1, 10, 100, ...)    
 
         // Special case when input is 0
         if (decimal == 0) {

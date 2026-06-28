@@ -1,0 +1,157 @@
+# --------------------------------------------------
+# Topic 2: Access Modifiers
+# --------------------------------------------------
+
+## 1. Definition
+- Access Modifiers control **who can access** a class, field, or method.
+- They set the **visibility/scope** of class members.
+- Java has 4 access modifiers: `public`, `private`, `protected`, and `default` (no keyword).
+
+---
+
+## 2. Real-Life Example
+- **public** → A park. Anyone from anywhere can enter.
+- **private** → Your bedroom. Only you can access it.
+- **protected** → A family home. Family members (subclasses) and people in the same area (package) can enter.
+- **default** → A society/colony gate. Only people inside the colony (same package) can enter.
+
+---
+
+## 3. Why Do We Use It?
+- To protect sensitive data from outside access.
+- To control which parts of code are visible to other classes.
+- Core part of **Encapsulation**.
+
+---
+
+## 4. Types
+
+| Modifier | Same Class | Same Package | Subclass (other pkg) | Other Package |
+|---|---|---|---|---|
+| `public` | ✅ | ✅ | ✅ | ✅ |
+| `protected` | ✅ | ✅ | ✅ | ❌ |
+| `default` | ✅ | ✅ | ❌ | ❌ |
+| `private` | ✅ | ❌ | ❌ | ❌ |
+
+---
+
+## 5. Key Rules
+- `private` → most restricted. Only accessible within the same class.
+- `public` → least restricted. Accessible from everywhere.
+- `default` → no keyword written. Package-level access only.
+- `protected` → like default + accessible in subclasses of other packages.
+- Class itself can only be `public` or `default` (not private/protected).
+
+---
+
+## 6. Syntax
+
+```java
+public class MyClass {
+    public int a;       // accessible everywhere
+    private int b;      // accessible only inside MyClass
+    protected int c;    // accessible in same package + subclasses
+    int d;              // default - accessible only in same package
+}
+```
+
+---
+
+## 7. Complete Java Program
+
+```java
+// File: AccessModifiers.java
+
+class BankAccount {                        // Class with different access modifiers
+
+    public String accountHolder;           // public - anyone can access this
+    private double balance;                // private - only this class can access
+    protected String bankName;             // protected - same package + subclasses
+    String accountType;                    // default - only same package
+
+    public void setBalance(double amount) {  // public method to set private field
+        if (amount >= 0) {                   // validation before setting
+            balance = amount;                // setting the private field
+        }
+    }
+
+    public double getBalance() {           // public method to read private field
+        return balance;                    // returning private field value
+    }
+
+    public void displayInfo() {            // public method - accessible everywhere
+        System.out.println("Holder: " + accountHolder);    // prints account holder
+        System.out.println("Bank: " + bankName);           // prints bank name
+        System.out.println("Type: " + accountType);        // prints account type
+        System.out.println("Balance: " + balance);         // can access private here (same class)
+    }
+}
+
+public class AccessModifiers {                       // Main class
+    public static void main(String[] args) {
+
+        BankAccount acc = new BankAccount();         // creating object
+
+        acc.accountHolder = "Prikshit";              // OK - public field
+        acc.bankName = "SBI";                        // OK - protected, same package
+        acc.accountType = "Savings";                 // OK - default, same package
+        // acc.balance = 5000;                       // ERROR - private, cannot access directly
+
+        acc.setBalance(5000);                        // OK - using public method to set private field
+        System.out.println(acc.getBalance());        // OK - using public method to read private field
+
+        acc.displayInfo();                           // calling public method
+    }
+}
+```
+
+---
+
+## 8. Output
+
+```
+5000.0
+Holder: Prikshit
+Bank: SBI
+Type: Savings
+Balance: 5000.0
+```
+
+---
+
+## 9. Interview Points
+- `private` fields are accessed using **getters and setters** (Encapsulation).
+- A top-level class cannot be `private` or `protected`.
+- `protected` is mainly used in **inheritance** across packages.
+- Default access is also called **package-private**.
+- Access modifiers apply to classes, fields, methods, and constructors.
+
+---
+
+## 10. Common Mistakes
+| Mistake | Correct Way |
+|---|---|
+| Accessing `private` field directly from outside class | Use getter/setter methods |
+| Marking top-level class as `private` | Top-level class can only be `public` or default |
+| Confusing `default` with `protected` | Default = same package only; Protected = same package + subclasses |
+
+---
+
+## 11. Difference Table
+
+| Modifier | Keyword Written | Scope |
+|---|---|---|
+| Public | `public` | Everywhere |
+| Protected | `protected` | Same package + subclasses |
+| Default | *(nothing)* | Same package only |
+| Private | `private` | Same class only |
+
+---
+
+## 12. Memory Trick
+> **"P-P-D-Pu" → Private, Protected, Default, Public**
+> Think of it as **doors with locks**:
+> 🔒🔒🔒 Private → only you have the key
+> 🔒🔒 Protected → family has the key
+> 🔒 Default → colony has the key
+> 🚪 Public → no lock, open for all

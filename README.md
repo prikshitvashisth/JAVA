@@ -6,10 +6,10 @@ It is intended for learning, exploring concepts, and building familiarity with t
 📂 Contents
 
 ## Topics Covered
-- Core Java basics  
-- Object-Oriented Programming (OOP)  
-- Collections Framework  
-- Problem-solving & algorithms  
+- Core Java basics
+- Object-Oriented Programming (OOP)
+- Collections Framework   
+- Problem-solving & algorithms   
 
 
 🚀 How to Run

@@ -12,7 +12,6 @@ public class SwapNum {
         return new int[]{a, b};
     }
 
-     
     
     // Method 2: Swap using XOR (bitwise operation)
     public static int[] swapWithXOR(int a, int b) 
@@ -24,7 +23,9 @@ public class SwapNum {
         a = a ^ b;
         // Return the swapped values as an array
         return new int[]{a, b};
-    }
+    }  
+    
+
 
     
     

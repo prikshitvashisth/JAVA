@@ -23,7 +23,7 @@ public class DecimalToBinary {
             int remainder = decimal % 2;   // Get remainder (0 or 1)
             binary += remainder * place;   // Add remainder at the correct place (1, 10, 100...)
             place *= 10;                   // Move to next binary place
-            decimal /= 2;                  // Divide by 2 for next iteration
+            decimal /= 2;                  // Divide by 2 for next iteration 
         }
 
         // Output the binary equivalent

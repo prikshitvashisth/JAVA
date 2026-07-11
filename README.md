@@ -25,6 +25,6 @@ It is intended for learning, exploring concepts, and building familiarity with t
 - java FileName  
 
 
-📌 Note
+📌 Note 
 
 This repository is for practice purposes only and may not always contain production-ready code.
